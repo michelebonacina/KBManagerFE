@@ -10,7 +10,6 @@ import { TopicType } from '../models/topic-type';
 export class TopicDetailsComponent implements OnInit {
 
   public showTopicDetails = false;
-  public showTopicDetailsLink = false;
 
   @Input() topic: Topic;
 
