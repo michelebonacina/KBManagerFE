@@ -1,14 +1,18 @@
-<table>
+<table class="w3-table w3-bordered">
   <tr>
     <th>Title</th>
     <td>{{article.title}}</td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>{{article.description}}</td>
   </tr>
   <tr>
     <th>Page</th>
     <td>{{article.page}}</td>
   </tr>
   <tr>
-    <th>Description</th>
-    <td>{{article.description}}</td>
+    <th>Magazine</th>
+    <td app-magazine-details [magazine]="article.magazine"></td>
   </tr>
 </table>

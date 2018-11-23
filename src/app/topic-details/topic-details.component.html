@@ -1,8 +1,6 @@
-<p (click)="showTopicDetails = !showTopicDetails" (mouseover)="showTopicDetailsLink = true" (mouseout)="showTopicDetailsLink = false" class="cursor-pointer">
+<button (click)="showTopicDetails = !showTopicDetails" class="w3-button w3-block {{ showTopicDetails ? 'w3-theme-d1' : '' }} w3-left-align">
     <i class="fa {{getFontNameByTopicType(topic.type)}} fa-fw w3-margin-right w3-text-theme"></i>
     {{topic.title}}
-    <i *ngIf="showTopicDetailsLink && !showTopicDetails" class="fa fa-search-plus fa-fw w3-margin-right w3-text-theme"></i>
-    <i *ngIf="showTopicDetailsLink && showTopicDetails" class="fa fa-search-minus fa-fw w3-margin-right w3-text-theme"></i>
-</p>
+</button>
 <p app-article-details *ngIf="showTopicDetails && topic.type == 'Article'" [article]="topic" class="w3-card w3-round w3-white w3-padding w3-left-align"></p>
 <p app-book-details *ngIf="showTopicDetails && topic.type == 'Book'" [book]="topic" class="w3-card w3-round w3-white w3-padding w3-left-align"></p>
