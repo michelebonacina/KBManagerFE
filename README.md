@@ -1,27 +1,35 @@
-# KbManagerFe
+# KbManager-Fe - Knoledge Base Manager Front End
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.2.
+## What is it?
+This project is the front end user interface of the [KBManager](https://github.com/michelebonacina/kb-manager) Project.
 
-## Development server
+Today we can collect a lot of data and informations, especially for whom like me works and enjoy with software development and new technologies.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+It's necessary to find a way a fast, simple and efficient way for archiving and searching information; 
+usually I don't remember that I've already searched for an argument, or if I remember it I don't know where to find it, especially for PDF or web links.   
 
-## Code scaffolding
+KBManager is an application for managing knowledge base, which allow users to catalog, archive and search different types of topics, 
+like books, magazine articles, electronical documents, online documents and so on.  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+KMBanager is an information archiver, not a content manager or a document archiver; it stores general information of the document and where to find it, 
+it does not archive the document itself.
 
-## Build
+KBManager-FE is a simple and powerful one page user interface for a slim and fast topic management experience.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## How to use it?
+KBManager-FE is a one page user interface. This means that you don't have to navigate between different pages which takes more time 
+and shows a different interface, but the single page changes part of its content for showing the results of user requests.
 
-## Running unit tests
+It's faster, earsier and more beatiful.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The page is made of different similar function boxes. 
+Each box contains a set of operation or information for topic management.
 
-## Running end-to-end tests
+## What's the changes till now?
+I've just starting in project development, so there's no a first beta release.
+The page main skeleton is 
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## What's next?
 
-## Further help
+This project was made using [Angular](https://angular.io/) version 6.2.2.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
