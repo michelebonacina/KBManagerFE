@@ -1,4 +1,5 @@
 import { TopicType } from './topic-type';
+import { Tag } from './tag';
 
 export abstract class Topic {
 
@@ -6,6 +7,7 @@ export abstract class Topic {
         public type: TopicType,
         public title: string,
         public description: string,
+        public tags?: Tag[],
     ) {
     }
 

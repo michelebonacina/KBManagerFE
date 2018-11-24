@@ -1,6 +1,3 @@
-<button (click)="showTopicDetails = !showTopicDetails" class="w3-button w3-block {{ showTopicDetails ? 'w3-theme-d1' : '' }} w3-left-align">
-    <i class="fa {{getFontNameByTopicType(topic.type)}} fa-fw w3-margin-right w3-text-theme"></i>
-    {{topic.title}}
-</button>
-<p app-article-details *ngIf="showTopicDetails && topic.type == 'Article'" [article]="topic" class="w3-card w3-round w3-white w3-padding w3-left-align"></p>
-<p app-book-details *ngIf="showTopicDetails && topic.type == 'Book'" [book]="topic" class="w3-card w3-round w3-white w3-padding w3-left-align"></p>
+<div class="w3-border-bottom"><strong>Title: </strong>{{topic.title}}</div>
+<div class="w3-border-bottom"><strong>Description: </strong>{{topic.description}}</div>
+<div class="w3-border-bottom"><strong>Tags: </strong><span *ngFor="let tag of topic.tags; let i = index"> <span *ngIf="i > 0"> - </span>{{tag.value}}</span></div>

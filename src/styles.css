@@ -6,3 +6,26 @@ html,body,h1,h2,h3,h4,h5,h6 {
 .cursor-pointer {
     cursor: pointer;
 }
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.flex-item-first {
+    -webkit-flex: 0 0px;
+    flex: 0 0px;
+    text-align: left;
+    padding-right: 10px;
+
+}
+
+.flex-item-last {
+    -webkit-flex: 1 auto;
+    flex: 1 auto;
+    vertical-align: middle;
+}

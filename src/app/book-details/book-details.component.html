@@ -1,14 +1,2 @@
-<table>
-  <tr>
-    <th>Title</th>
-    <td>{{book.title}}</td>
-  </tr>
-  <tr>
-    <th>Description</th>
-    <td>{{book.description}}</td>
-  </tr>
-  <tr>
-    <th>Total Pages</th>
-    <td>{{book.pages}}</td>
-  </tr>
-</table>
+<app-topic-details [topic]="book"></app-topic-details>
+<div class="w3-border-bottom"><strong>Total Pages: </strong>{{book.pages}}</div>
