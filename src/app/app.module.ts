@@ -7,6 +7,8 @@ import { TopicDetailsComponent } from './topic-details/topic-details.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { ArticleDetailsComponent } from './article-details/article-details.component';
 import { MagazineDetailsComponent } from './magazine-details/magazine-details.component';
+import { DocumentDetailsComponent } from './document-details/document-details.component';
+import { WebDocumentDetailsComponent } from './web-document-details/web-document-details.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { MagazineDetailsComponent } from './magazine-details/magazine-details.co
     TopicDetailsComponent,
     BookDetailsComponent,
     ArticleDetailsComponent,
-    MagazineDetailsComponent
+    MagazineDetailsComponent,
+    DocumentDetailsComponent,
+    WebDocumentDetailsComponent
   ],
   imports: [
     BrowserModule

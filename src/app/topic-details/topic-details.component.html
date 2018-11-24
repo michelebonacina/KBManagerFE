@@ -1,3 +1,4 @@
 <div class="w3-border-bottom"><strong>Title: </strong>{{topic.title}}</div>
 <div class="w3-border-bottom"><strong>Description: </strong>{{topic.description}}</div>
+<div class="w3-border-bottom"><strong>Type: </strong>{{topic.type}}</div>
 <div class="w3-border-bottom"><strong>Tags: </strong><span *ngFor="let tag of topic.tags; let i = index"> <span *ngIf="i > 0"> - </span>{{tag.value}}</span></div>
