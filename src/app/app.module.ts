@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { TopicListComponent } from './topic-list/topic-list.component';
@@ -9,6 +10,7 @@ import { ArticleDetailsComponent } from './article-details/article-details.compo
 import { MagazineDetailsComponent } from './magazine-details/magazine-details.component';
 import { DocumentDetailsComponent } from './document-details/document-details.component';
 import { WebDocumentDetailsComponent } from './web-document-details/web-document-details.component';
+import { MagazineListComponent } from './magazine-list/magazine-list.component';
 
 @NgModule({
   declarations: [
@@ -19,10 +21,12 @@ import { WebDocumentDetailsComponent } from './web-document-details/web-document
     ArticleDetailsComponent,
     MagazineDetailsComponent,
     DocumentDetailsComponent,
-    WebDocumentDetailsComponent
+    WebDocumentDetailsComponent,
+    MagazineListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -24,7 +24,7 @@ export class TopicListComponent implements OnInit {
       let toReturn = '';
       switch (topicType) {
         case TopicType.Article: {
-          toReturn = 'fa-newspaper';
+          toReturn = 'fa-indent';
           break;
         }
         case TopicType.Book: {

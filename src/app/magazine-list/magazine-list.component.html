@@ -1,0 +1,24 @@
+<h4>Magazine Management</h4><br>
+<table class="w3-table w3-bordered">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th class="w3-right-align">Number</th>
+      <th class="w3-right-align">Year</th>
+      <th class="w3-right-align">Month</th>
+      <th class="w3-right-align">Pages</th>
+      <th>Editor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let magazine of magazines">
+      <td>{{magazine.title}}</td>
+      <td class="w3-right-align">{{magazine.number}}</td>
+      <td class="w3-right-align">{{magazine.year}}</td>
+      <td class="w3-right-align">{{magazine.month}}</td>
+      <td class="w3-right-align">{{magazine.pages}}</td>
+      <td>{{magazine.editor}}</td>
+    </tr>
+  </tbody>
+</table>
+<br>

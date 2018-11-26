@@ -45,7 +45,7 @@
             <button onclick="showDetails('ByTopic')" class="w3-button w3-block w3-left-align"><i class="fa fa-book-open fa-fw w3-margin-right w3-text-theme"></i>By Topic</button>
             <div id="ByTopic" class="w3-hide w3-container">
               <button class="w3-button w3-block w3-left-align"><i class="fa fa-book fa-fw w3-margin-right w3-text-theme"></i>Book</button>
-              <button class="w3-button w3-block w3-left-align"><i class="fa fa-newspaper fa-fw w3-margin-right w3-text-theme"></i>Article</button>
+              <button class="w3-button w3-block w3-left-align"><i class="fa fa-indent fa-fw w3-margin-right w3-text-theme"></i>Article</button>
               <button class="w3-button w3-block w3-left-align"><i class="fa fa-file-alt fa-fw w3-margin-right w3-text-theme"></i>Document</button>
               <button class="w3-button w3-block w3-left-align"><i class="fa fa-link fa-fw w3-margin-right w3-text-theme"></i>Web Document</button>
             </div>
@@ -59,26 +59,59 @@
             </div>
           </div>
         </div>
+        
         <br>
 
         <!-- Operations -->
         <div class="w3-card w3-round w3-white">
           <div class="w3-padding-16">
-            <h4 class="w3-center w3-theme-l1">Operations</h4>
-            <button onclick="showDetails('NewTopic')" class="w3-button w3-block w3-left-align"><i class="fa fa-book-open fa-fw w3-margin-right w3-text-theme"></i>New Topic</button>
+            <h4 class="w3-center w3-theme-l1">Fast Operations</h4>
+            <button onclick="showDetails('NewTopic')" class="w3-button w3-block w3-left-align"><i class="fa fa-book-open fa-fw w3-margin-right w3-text-theme"></i>Topic</button>
             <div id="NewTopic" class="w3-hide w3-container">
-              <button class="w3-button w3-block w3-left-align"><i class="fa fa-book fa-fw w3-margin-right w3-text-theme"></i>Book</button>
-              <button class="w3-button w3-block w3-left-align"><i class="fa fa-newspaper fa-fw w3-margin-right w3-text-theme"></i>Article</button>
-              <button class="w3-button w3-block w3-left-align"><i class="fa fa-file-alt fa-fw w3-margin-right w3-text-theme"></i>Document</button>
-              <button class="w3-button w3-block w3-left-align"><i class="fa fa-link fa-fw w3-margin-right w3-text-theme"></i>Web Document</button>
+              <button class="w3-button w3-block w3-left-align"><i class="fa fa-book fa-fw w3-margin-right w3-text-theme"></i>New Book</button>
+              <button class="w3-button w3-block w3-left-align"><i class="fa fa-indent fa-fw w3-margin-right w3-text-theme"></i>New Article</button>
+              <button class="w3-button w3-block w3-left-align"><i class="fa fa-file-alt fa-fw w3-margin-right w3-text-theme"></i>New Document</button>
+              <button class="w3-button w3-block w3-left-align"><i class="fa fa-link fa-fw w3-margin-right w3-text-theme"></i>New Web Document</button>
             </div>
-            <button onclick="showDetails('NewLocation')" class="w3-button w3-block w3-left-align"><i class="fa fa-boxes fa-fw w3-margin-right w3-text-theme"></i>New Location</button>
+            <button onclick="showDetails('NewLocation')" class="w3-button w3-block w3-left-align"><i class="fa fa-boxes fa-fw w3-margin-right w3-text-theme"></i>Location</button>
             <div id="NewLocation" class="w3-hide w3-container">
+              <button class="w3-button w3-block w3-left-align"><i class="fa fa-layer-group fa-fw w3-margin-right w3-text-theme"></i>New Shelf</button>
+              <button class="w3-button w3-block w3-left-align"><i class="fa fa-archive fa-fw w3-margin-right w3-text-theme"></i>New Box</button>
+              <button class="w3-button w3-block w3-left-align"><i class="fa fa-coins fa-fw w3-margin-right w3-text-theme"></i>New Magnetic Support</button>
+              <button class="w3-button w3-block w3-left-align"><i class="fa fa-cloud fa-fw w3-margin-right w3-text-theme"></i>New Cloud</button>
+              <button class="w3-button w3-block w3-left-align"><i class="fa fa-tablet-alt fa-fw w3-margin-right w3-text-theme"></i>New E-Reader</button>
+            </div>
+            <button onclick="showDetails('NewOthers')" class="w3-button w3-block w3-left-align"><i class="fa fa-grip-horizontal fa-fw w3-margin-right w3-text-theme"></i>Others</button>
+            <div id="NewOthers" class="w3-hide w3-container">
+              <button class="w3-button w3-block w3-left-align"><i class="fa fa-newspaper fa-fw w3-margin-right w3-text-theme"></i>New Magazine</button>
+            </div>
+          </div>          
+        </div>
+        
+        <br>
+        
+        <!-- Management -->
+        <div class="w3-card w3-round w3-white">
+          <div class="w3-padding-16">
+            <h4 class="w3-center w3-theme-l1">Management</h4>
+            <button onclick="showDetails('TopicManagement')" class="w3-button w3-block w3-left-align"><i class="fa fa-book-open fa-fw w3-margin-right w3-text-theme"></i>Topic</button>
+            <div id="TopicManagement" class="w3-hide w3-container">
+              <button class="w3-button w3-block w3-left-align"><i class="fa fa-book fa-fw w3-margin-right w3-text-theme"></i>Book</button>
+              <button class="w3-button w3-block w3-left-align"><i class="fa fa-indent fa-fw w3-margin-right w3-text-theme"></i>Article</button>
+              <button class="w3-button w3-block w3-left-align"><i class="fa fa-file-alt fa-fw w3-margin-right w3-text-theme"></i>Document</button>
+              <button class="w3-button w3-block w3-left-align"><i class="fa fa-link fa-fw w3-margin-right w3-text-theme"></i> Web Document</button>
+            </div>
+            <button onclick="showDetails('LocationManagement')" class="w3-button w3-block w3-left-align"><i class="fa fa-boxes fa-fw w3-margin-right w3-text-theme"></i>Location</button>
+            <div id="LocationManagement" class="w3-hide w3-container">
               <button class="w3-button w3-block w3-left-align"><i class="fa fa-layer-group fa-fw w3-margin-right w3-text-theme"></i>Shelf</button>
               <button class="w3-button w3-block w3-left-align"><i class="fa fa-archive fa-fw w3-margin-right w3-text-theme"></i>Box</button>
               <button class="w3-button w3-block w3-left-align"><i class="fa fa-coins fa-fw w3-margin-right w3-text-theme"></i>Magnetic Support</button>
               <button class="w3-button w3-block w3-left-align"><i class="fa fa-cloud fa-fw w3-margin-right w3-text-theme"></i>Cloud</button>
               <button class="w3-button w3-block w3-left-align"><i class="fa fa-tablet-alt fa-fw w3-margin-right w3-text-theme"></i>E-Reader</button>
+            </div>
+            <button onclick="showDetails('OthersManagement')" class="w3-button w3-block w3-left-align"><i class="fa fa-grip-horizontal fa-fw w3-margin-right w3-text-theme"></i>Others</button>
+            <div id="OthersManagement" class="w3-hide w3-container">
+              <button (click)="showManagement('magazine')" class="w3-button w3-block w3-left-align"><i class="fa fa-newspaper fa-fw w3-margin-right w3-text-theme"></i>Magazine</button>
             </div>
           </div>          
         </div>
@@ -134,6 +167,14 @@
             </div>
           </div>
         </div>
+
+        <!-- Data management -->
+        <div *ngIf="showDetails" class="w3-container w3-card w3-white w3-round w3-margin"><br>
+          <img src="assets/icons/iconfinder_25_3319619.png" alt="Latest Topic" class="w3-left w3-circle w3-margin-right" style="width:48px">
+          <span (click)="showDetails=false" class="w3-right w3-opacity cursor-pointer">Close</span>          
+          <app-magazine-list *ngIf="this.managementType === 'magazine'"></app-magazine-list>
+        </div>
+
         
         <!-- Latest Topic -->
         <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
