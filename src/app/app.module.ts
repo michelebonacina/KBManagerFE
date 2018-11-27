@@ -11,6 +11,7 @@ import { MagazineDetailsComponent } from './magazine-details/magazine-details.co
 import { DocumentDetailsComponent } from './document-details/document-details.component';
 import { WebDocumentDetailsComponent } from './web-document-details/web-document-details.component';
 import { MagazineListComponent } from './magazine-list/magazine-list.component';
+import { MagazineApiService } from './services/magazine-api.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { MagazineListComponent } from './magazine-list/magazine-list.component';
     BrowserModule,
     HttpModule,
   ],
-  providers: [],
+  providers: [MagazineApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

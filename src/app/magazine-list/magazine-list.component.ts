@@ -12,14 +12,17 @@ export class MagazineListComponent implements OnInit {
   magazines: Magazine[];
 
   constructor(
-    public magazineApiService: MagazineApiService,
+    private magazineApiService: MagazineApiService,
   ) { }
 
   ngOnInit() {
+    this.findAll();
+  }
+
+  public findAll() {
     this.magazineApiService.findAll()
       .then(
         data => {
-          console.log(JSON.stringify(data));
           this.magazines = data;
         }
       );
