@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TopicListComponent } from './topic-list/topic-list.component';
@@ -28,6 +29,8 @@ import { MagazineApiService } from './services/magazine-api.service';
   imports: [
     BrowserModule,
     HttpModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [MagazineApiService],
   bootstrap: [AppComponent]

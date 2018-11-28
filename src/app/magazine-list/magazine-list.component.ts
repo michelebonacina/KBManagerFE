@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { Magazine } from '../models/magazine';
 import { MagazineApiService } from '../services/magazine-api.service';
 
@@ -10,10 +11,24 @@ import { MagazineApiService } from '../services/magazine-api.service';
 export class MagazineListComponent implements OnInit {
 
   magazines: Magazine[];
+  showInsertForm = false;
+  magazineForm: FormGroup;
 
   constructor(
+    formBuilder: FormBuilder,
     private magazineApiService: MagazineApiService,
-  ) { }
+  ) {
+    this.magazineForm = formBuilder.group(
+      {
+        'title': [null],
+        'number': [null],
+        'year': [null],
+        'month': [null],
+        'pages': [null],
+        'editor': [null],
+      }
+    );
+  }
 
   ngOnInit() {
     this.findAll();
@@ -26,6 +41,11 @@ export class MagazineListComponent implements OnInit {
           this.magazines = data;
         }
       );
+  }
+
+  public newDataForm() {
+    this.showInsertForm = true;
+    console.log(this.showInsertForm);
   }
 
 
