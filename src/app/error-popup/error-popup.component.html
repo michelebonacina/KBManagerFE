@@ -1,0 +1,5 @@
+<div *ngIf="isError()" class="errorHider"></div>
+<div *ngIf="isError()" class="errorPopup">
+  <p class="errorMessage">{{getMessage()}}</p>
+  <button (click)="hide()">Close</button>
+</div>

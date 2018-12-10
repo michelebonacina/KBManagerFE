@@ -13,6 +13,8 @@ import { DocumentDetailsComponent } from './document-details/document-details.co
 import { WebDocumentDetailsComponent } from './web-document-details/web-document-details.component';
 import { MagazineListComponent } from './magazine-list/magazine-list.component';
 import { MagazineApiService } from './services/magazine-api.service';
+import { ErrorPopupComponent } from './error-popup/error-popup.component';
+import { ErrorService } from './services/error.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { MagazineApiService } from './services/magazine-api.service';
     MagazineDetailsComponent,
     DocumentDetailsComponent,
     WebDocumentDetailsComponent,
-    MagazineListComponent
+    MagazineListComponent,
+    ErrorPopupComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,11 @@ import { MagazineApiService } from './services/magazine-api.service';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [MagazineApiService],
+  providers: [
+    MagazineApiService,
+    ErrorPopupComponent,
+    ErrorService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

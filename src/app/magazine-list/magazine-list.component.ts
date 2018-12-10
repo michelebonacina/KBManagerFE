@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { Magazine } from '../models/magazine';
 import { MagazineApiService } from '../services/magazine-api.service';
+import { ErrorService } from '../services/error.service';
 
 @Component({
   selector: 'app-magazine-list',
@@ -13,11 +14,13 @@ export class MagazineListComponent implements OnInit {
   magazines: Magazine[];
   showInsertForm = false;
   magazineForm: FormGroup;
-
+  errorService: ErrorService;
   constructor(
     formBuilder: FormBuilder,
+    errorService: ErrorService,
     private magazineApiService: MagazineApiService,
   ) {
+    this.errorService = errorService;
     this.magazineForm = formBuilder.group(
       {
         'title': [null],
@@ -39,13 +42,16 @@ export class MagazineListComponent implements OnInit {
       .then(
         data => {
           this.magazines = data;
+        })
+      .catch(
+        error => {
+          this.errorService.showError('Error loading Magazines! ' + (error.message || + error.code || error));
         }
       );
   }
 
   public newDataForm() {
     this.showInsertForm = true;
-    console.log(this.showInsertForm);
   }
 
 
