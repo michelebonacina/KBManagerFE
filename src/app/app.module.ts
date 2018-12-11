@@ -15,6 +15,7 @@ import { MagazineListComponent } from './magazine-list/magazine-list.component';
 import { MagazineApiService } from './services/magazine-api.service';
 import { ErrorPopupComponent } from './error-popup/error-popup.component';
 import { ErrorService } from './services/error.service';
+import { MagazineEditComponent } from './magazine-edit/magazine-edit.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ErrorService } from './services/error.service';
     DocumentDetailsComponent,
     WebDocumentDetailsComponent,
     MagazineListComponent,
-    ErrorPopupComponent
+    ErrorPopupComponent,
+    MagazineEditComponent,
   ],
   imports: [
     BrowserModule,

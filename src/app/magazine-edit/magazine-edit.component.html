@@ -1,0 +1,10 @@
+<form *ngIf="showForm" [formGroup]="magazineForm">
+    <span class="single"><label>Title</label><input type="text" size="50" formControlName="title"></span>
+    <span class="near"><label>Number</label><input type="text" size="5" formControlName="number"></span>
+    <span class="near"><label>Year</label><input type="text" size="4" formControlName="year"></span>
+    <span class="near"><label>Month</label><input type="text" size="2" formControlName="month"></span>
+    <span class="near"><label>Pages</label><input type="text" size="5" formControlName="pages"></span>
+    <span class="single"><label>Editor</label><input type="text" size="50" formControlName="editor"></span>
+    <button>Save</button>
+    <button class="near" (click)="cancel()">Cancel</button>
+</form>

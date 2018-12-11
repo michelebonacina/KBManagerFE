@@ -1,8 +1,9 @@
 <h4>Magazine Management</h4><br>
+<app-magazine-edit #insertForm></app-magazine-edit>
 <table class="w3-table w3-bordered">
   <thead>
     <tr>
-      <th><i (click)="newDataForm()" class="fa fa-plus-square fa-fw w3-margin-right w3-text-theme cursor-pointer"></i></th>
+      <th><i (click)="insertForm.show()" class="fa fa-plus-square fa-fw w3-margin-right w3-text-theme cursor-pointer"></i></th>
       <th>Title</th>
       <th class="w3-right-align">Number</th>
       <th class="w3-right-align">Year</th>
@@ -12,17 +13,6 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngIf="showInsertForm">
-      <form [formGroup]="magazineForm">
-        <td></td>
-        <td><input type="text" formControlName="title"></td>
-        <td><input type="text" formControlName="number"></td>
-        <td><input type="text" formControlName="year"></td>
-        <td><input type="text" formControlName="month"></td>
-        <td><input type="text" formControlName="pages"></td>
-        <td><input type="text" formControlName="editor"></td>
-      </form>
-    </tr>
     <tr *ngFor="let magazine of magazines">
       <td></td>
       <td>{{magazine.title}}</td>
