@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Magazine } from '../models/magazine';
 import { MagazineApiService } from '../services/magazine-api.service';
 import { ErrorService } from '../services/error.service';
+import { MagazineEditComponent } from '../magazine-edit/magazine-edit.component';
 
 @Component({
   selector: 'app-magazine-list',
@@ -10,6 +11,8 @@ import { ErrorService } from '../services/error.service';
 })
 export class MagazineListComponent implements OnInit {
 
+  @ViewChild(MagazineEditComponent)
+  private magazineEditComponent: MagazineEditComponent;
   magazines: Magazine[];
   showInsertForm = false;
   errorService: ErrorService;
@@ -35,6 +38,10 @@ export class MagazineListComponent implements OnInit {
           this.errorService.showError('Error loading Magazines! ' + (error.message || + error.code || error));
         }
       );
+  }
+
+  public showForm() {
+    this.magazineEditComponent.show();
   }
 
 }
