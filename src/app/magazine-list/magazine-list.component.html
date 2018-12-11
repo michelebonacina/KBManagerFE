@@ -3,7 +3,7 @@
 <table class="w3-table w3-bordered">
   <thead>
     <tr>
-      <th><i (click)="showForm()" class="fa fa-plus-square fa-fw w3-margin-right w3-text-theme cursor-pointer"></i></th>
+      <th><i (click)="showInsertForm()" class="fa fa-plus-square fa-fw w3-margin-right w3-text-theme cursor-pointer"></i></th>
       <th>Title</th>
       <th class="w3-right-align">Number</th>
       <th class="w3-right-align">Year</th>
@@ -14,7 +14,7 @@
   </thead>
   <tbody>
     <tr *ngFor="let magazine of magazines">
-      <td></td>
+      <td><i (click)="showEditForm(magazine)" class="fa fa-edit w3-text-theme cursor-pointer"></i></td>
       <td>{{magazine.title}}</td>
       <td class="w3-right-align">{{magazine.number}}</td>
       <td class="w3-right-align">{{magazine.year}}</td>

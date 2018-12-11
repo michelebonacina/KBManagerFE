@@ -18,7 +18,8 @@ export class AppComponent {
   showDetails = false;
   managementType = '';
 
-  m1: Magazine = new Magazine('IoProgrammo', 2018, 2, 223, 'Edizioni Master', 74);
+  // m1: Magazine = new Magazine('1', 'IoProgrammo', 2018, 2, 223, 74, 'Edizioni Master');
+  m1: Magazine = new Magazine();
   t1: Topic = new Book('Java by example', 'Manuale java', 156, [new Tag('java')]);
   t2: Topic = new Book('Spring by example', 'Manuale spring', 352, [new Tag('java'), new Tag('spring'), new Tag('web')]);
   t3: Topic = new Article('Un solo codice per tutti i device',

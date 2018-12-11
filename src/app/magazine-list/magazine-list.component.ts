@@ -14,34 +14,40 @@ export class MagazineListComponent implements OnInit {
   @ViewChild(MagazineEditComponent)
   private magazineEditComponent: MagazineEditComponent;
   magazines: Magazine[];
-  showInsertForm = false;
   errorService: ErrorService;
+
   constructor(
     errorService: ErrorService,
     private magazineApiService: MagazineApiService,
   ) {
     this.errorService = errorService;
-  }
+  } // constructor
 
   ngOnInit() {
-    this.findAll();
-  }
-
-  public findAll() {
-    this.magazineApiService.findAll()
-      .then(
-        data => {
-          this.magazines = data;
-        })
-      .catch(
-        error => {
+    this.magazineApiService.getObservable().subscribe(
+      {
+        next: magazines => {
+          this.magazines = magazines;
+        },
+        error: error => {
           this.errorService.showError('Error loading Magazines! ' + (error.message || + error.code || error));
         }
-      );
-  }
+      }
+    );
+    this.listMagazines();
+  } // ngOnInit
 
-  public showForm() {
-    this.magazineEditComponent.show();
-  }
+  public listMagazines() {
+    // find all magazines
+    this.magazineApiService.findAll();
+  } // findAll
 
-}
+  public showInsertForm() {
+    this.magazineEditComponent.newMagazine();
+  } // showInsertForm
+
+  public showEditForm(magazine: Magazine) {
+    this.magazineEditComponent.editMagazine(magazine);
+  } // showEditForm
+
+} // MagazineListComponent

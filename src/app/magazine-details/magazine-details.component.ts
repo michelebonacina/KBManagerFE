@@ -10,9 +10,10 @@ export class MagazineDetailsComponent implements OnInit {
 
   @Input() magazine: Magazine;
 
-  constructor() { }
+  constructor() {
+  } // constructor
 
   ngOnInit() {
-  }
+  } // ngOnInit
 
-}
+} // MagazineDetailsComponent
