@@ -30,7 +30,7 @@ export class MagazineListComponent implements OnInit {
           this.magazines = magazines;
         },
         error: error => {
-          this.errorService.showError('Error loading Magazines! ' + (error.message || + error.code || error));
+          this.errorService.showError('Error loading Magazines! ' + (error.body || error._body || error.message || + error.code || error));
         }
       }
     );
