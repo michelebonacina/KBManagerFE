@@ -86,7 +86,7 @@
             </div>
             <button onclick="showDetails('NewOthers')" class="w3-button w3-block w3-left-align"><i class="fa fa-grip-horizontal fa-fw w3-margin-right w3-text-theme"></i>Others</button>
             <div id="NewOthers" class="w3-hide w3-container">
-              <button class="w3-button w3-block w3-left-align"><i class="fa fa-newspaper fa-fw w3-margin-right w3-text-theme"></i>New Magazine</button>
+              <button (click)="appMagazineReady.newMagazine();" class="w3-button w3-block w3-left-align"><i class="fa fa-newspaper fa-fw w3-margin-right w3-text-theme"></i>New Magazine</button>
             </div>
           </div>          
         </div>
@@ -170,6 +170,9 @@
             </div>
           </div>
         </div>
+
+        <!-- Fast Operation Management -->
+        <app-magazine-edit #appMagazineReady></app-magazine-edit>
 
         <!-- Data management -->
         <div *ngIf="showDetails" class="w3-container w3-card w3-white w3-round w3-margin"><br>
