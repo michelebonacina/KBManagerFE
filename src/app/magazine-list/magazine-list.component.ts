@@ -1,8 +1,7 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Magazine } from '../models/magazine';
 import { MagazineApiService } from '../services/magazine-api.service';
 import { ErrorService } from '../services/error.service';
-import { MagazineEditComponent } from '../magazine-edit/magazine-edit.component';
 
 @Component({
   selector: 'app-magazine-list',
@@ -11,8 +10,7 @@ import { MagazineEditComponent } from '../magazine-edit/magazine-edit.component'
 })
 export class MagazineListComponent implements OnInit {
 
-  @ViewChild(MagazineEditComponent)
-  private magazineEditComponent: MagazineEditComponent;
+  showDetails = false;
   magazines: Magazine[];
   errorService: ErrorService;
 
@@ -41,13 +39,5 @@ export class MagazineListComponent implements OnInit {
     // find all magazines
     this.magazineApiService.findAll();
   } // findAll
-
-  public showInsertForm() {
-    this.magazineEditComponent.newMagazine();
-  } // showInsertForm
-
-  public showEditForm(magazine: Magazine) {
-    this.magazineEditComponent.editMagazine(magazine);
-  } // showEditForm
 
 } // MagazineListComponent

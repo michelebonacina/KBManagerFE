@@ -1,27 +1,30 @@
-<h4>Magazine Management</h4><br>
-<app-magazine-edit></app-magazine-edit>
-<table class="w3-table w3-bordered">
-  <thead>
-    <tr>
-      <th><i (click)="showInsertForm()" class="fa fa-plus-square fa-fw w3-margin-right w3-text-theme cursor-pointer"></i></th>
-      <th>Title</th>
-      <th class="w3-right-align">Number</th>
-      <th class="w3-right-align">Year</th>
-      <th class="w3-right-align">Month</th>
-      <th class="w3-right-align">Pages</th>
-      <th>Editor</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let magazine of magazines">
-      <td><i (click)="showEditForm(magazine)" class="fa fa-edit w3-text-theme cursor-pointer"></i></td>
-      <td>{{magazine.title}}</td>
-      <td class="w3-right-align">{{magazine.number}}</td>
-      <td class="w3-right-align">{{magazine.year}}</td>
-      <td class="w3-right-align">{{magazine.month}}</td>
-      <td class="w3-right-align">{{magazine.pages}}</td>
-      <td>{{magazine.editor}}</td>
-    </tr>
-  </tbody>
-</table>
-<br>
+<div *ngIf="showDetails" class="w3-container w3-card w3-white w3-round w3-margin"><br>
+  <img src="assets/icons/management.png" alt="Latest Topic" class="w3-left w3-margin-right" style="width:24px">
+  <span (click)="showDetails=false" class="w3-right w3-opacity cursor-pointer"><i class="far fa-window-close "></i></span>          
+  <h4 class="w3-border-bottom">Magazine Management</h4>
+  <app-magazine-edit #appMagazineEdit></app-magazine-edit>
+  <table class="w3-table w3-bordered">
+    <thead>
+      <tr>
+        <th><i (click)="appMagazineEdit.newMagazine()" class="fa fa-plus-square fa-fw w3-margin-right w3-text-theme cursor-pointer"></i></th>
+        <th>Title</th>
+        <th class="w3-right-align">Number</th>
+        <th class="w3-right-align">Year</th>
+        <th class="w3-right-align">Month</th>
+        <th class="w3-right-align">Pages</th>
+        <th>Editor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let magazine of magazines">
+        <td><i (click)="appMagazineEdit.editMagazine(magazine)" class="fa fa-edit w3-text-theme cursor-pointer"></i></td>
+        <td>{{magazine.title}}</td>
+        <td class="w3-right-align">{{magazine.number}}</td>
+        <td class="w3-right-align">{{magazine.year}}</td>
+        <td class="w3-right-align">{{magazine.month}}</td>
+        <td class="w3-right-align">{{magazine.pages}}</td>
+        <td>{{magazine.editor}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

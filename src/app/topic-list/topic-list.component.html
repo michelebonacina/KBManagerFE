@@ -1,10 +1,15 @@
-<span *ngFor="let topic of topics; let i = index">
-    <button (click)="showTopicDetails[i] = !showTopicDetails[i]" class="w3-button w3-block {{ showTopicDetails[i] ? 'w3-theme-d1' : '' }} w3-left-align">
-        <i class="fa {{getFontNameByTopicType(topic.type)}} fa-fw w3-margin-right w3-text-theme"></i>
-        {{topic.title}}
-    </button>
-    <p app-article-details [article]="topic" *ngIf="showTopicDetails[i] && topic.type == 'Article'" class="w3-card w3-round w3-white w3-padding w3-left-align"></p>
-    <p app-book-details *ngIf="showTopicDetails[i] && topic.type == 'Book'" [book]="topic" class="w3-card w3-round w3-white w3-padding w3-left-align"></p>    
-    <p app-document-details *ngIf="showTopicDetails[i] && topic.type == 'Document'" [document]="topic" class="w3-card w3-round w3-white w3-padding w3-left-align"></p>    
-    <p app-web-document-details *ngIf="showTopicDetails[i] && topic.type == 'Web Document'" [webDocument]="topic" class="w3-card w3-round w3-white w3-padding w3-left-align"></p>    
-</span>
+<div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+    <img src="assets/icons/latest.png" alt="Latest Topic" class="w3-left w3-margin-right" style="width:24px">
+    <span class="w3-right w3-opacity">1 min</span>
+    <h4 class="w3-border-bottom">Latest Topic</h4>
+    <span *ngFor="let topic of topics; let i = index">
+        <button (click)="showTopicDetails[i] = !showTopicDetails[i]" class="w3-button w3-block {{ showTopicDetails[i] ? 'w3-theme-d1' : '' }} w3-left-align">
+            <i class="fa {{getFontNameByTopicType(topic.type)}} fa-fw w3-margin-right w3-text-theme"></i>
+            {{topic.title}}
+        </button>
+        <p app-article-details [article]="topic" *ngIf="showTopicDetails[i] && topic.type == 'Article'" class="w3-card w3-round w3-white w3-padding w3-left-align"></p>
+        <p app-book-details *ngIf="showTopicDetails[i] && topic.type == 'Book'" [book]="topic" class="w3-card w3-round w3-white w3-padding w3-left-align"></p>    
+        <p app-document-details *ngIf="showTopicDetails[i] && topic.type == 'Document'" [document]="topic" class="w3-card w3-round w3-white w3-padding w3-left-align"></p>    
+        <p app-web-document-details *ngIf="showTopicDetails[i] && topic.type == 'Web Document'" [webDocument]="topic" class="w3-card w3-round w3-white w3-padding w3-left-align"></p>    
+    </span>
+</div>

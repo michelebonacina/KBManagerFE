@@ -15,7 +15,6 @@ import { WebDocument } from './models/web-document';
 })
 export class AppComponent {
   title = 'kb-manager-fe';
-  showDetails = false;
   managementType = '';
 
   // m1: Magazine = new Magazine('1', 'IoProgrammo', 2018, 2, 223, 74, 'Edizioni Master');
@@ -31,10 +30,5 @@ export class AppComponent {
     'http://www.davismol.net/2017/07/16/creare-una-web-application-con-spring-boot-mongodb-angularjs-4-e-typescript-e-deployarla-in-cloud-come-microsoft-azure-webapp-parte-1/',
     [new Tag('java'), new Tag('spring'), new Tag('web')]);
   topics: Topic[] = [this.t1, this.t2, this.t3, this.t4, this.t5];
-
-  public showManagement(managementType: string) {
-    this.showDetails = true;
-    this.managementType = managementType;
-  }
 
 }

@@ -114,7 +114,7 @@
             </div>
             <button onclick="showDetails('OthersManagement')" class="w3-button w3-block w3-left-align"><i class="fa fa-grip-horizontal fa-fw w3-margin-right w3-text-theme"></i>Others</button>
             <div id="OthersManagement" class="w3-hide w3-container">
-              <button (click)="showManagement('magazine')" class="w3-button w3-block w3-left-align"><i class="fa fa-newspaper fa-fw w3-margin-right w3-text-theme"></i>Magazine</button>
+              <button (click)="appMagazineList.showDetails=true" class="w3-button w3-block w3-left-align"><i class="fa fa-newspaper fa-fw w3-margin-right w3-text-theme"></i>Magazine</button>
             </div>
           </div>          
         </div>
@@ -175,20 +175,11 @@
         <app-magazine-edit #appMagazineReady></app-magazine-edit>
 
         <!-- Data management -->
-        <div *ngIf="showDetails" class="w3-container w3-card w3-white w3-round w3-margin"><br>
-          <img src="assets/icons/iconfinder_25_3319619.png" alt="Latest Topic" class="w3-left w3-circle w3-margin-right" style="width:48px">
-          <span (click)="showDetails=false" class="w3-right w3-opacity cursor-pointer"><i class="far fa-window-close "></i></span>          
-          <app-magazine-list *ngIf="this.managementType === 'magazine'"></app-magazine-list>
-        </div>
+        <app-magazine-list #appMagazineList></app-magazine-list>
 
         
         <!-- Latest Topic -->
-        <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-          <img src="assets/icons/iconfinder_25_3319619.png" alt="Latest Topic" class="w3-left w3-circle w3-margin-right" style="width:48px">
-          <span class="w3-right w3-opacity">1 min</span>
-          <h4>Latest Topic</h4><br>
-          <app-topic-list [topics]="topics"></app-topic-list>
-        </div>
+        <app-topic-list [topics]="topics"></app-topic-list>
         
       <!-- End Middle Column -->
       </div>

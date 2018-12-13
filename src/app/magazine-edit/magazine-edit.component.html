@@ -1,11 +1,16 @@
-<form class="w3-border w3-padding" *ngIf="showForm" [formGroup]="magazineForm">
-    <input type="hidden" formControlName="id">
-    <span class="w3-block"><label>Title</label><input type="text" size="50" formControlName="title"></span>
-    <span class="w3-show-inline-block"><label>Number</label><input type="text" size="5" formControlName="number"></span>
-    <span class="w3-show-inline-block"><label>Year</label><input type="text" size="4" formControlName="year"></span>
-    <span class="w3-show-inline-block"><label>Month</label><input type="text" size="2" formControlName="month"></span>
-    <span class="w3-show-inline-block"><label>Pages</label><input type="text" size="5" formControlName="pages"></span>
-    <span class="w3-block"><label>Editor</label><input type="text" size="50" formControlName="editor"></span>
-    <button (click)="save()" class="w3-button w3-margin-top w3-margin-right w3-theme-l4">Save</button>
-    <button (click)="cancel()" class="w3-button w3-margin-top w3-margin-right w3-theme-l4">Cancel</button>
-</form>
+<div *ngIf="showForm" class="w3-container w3-card w3-white w3-round w3-margin"><br>
+    <img src="assets/icons/edit.png" alt="Latest Topic" class="w3-left w3-margin-right" style="width:24px">
+    <span (click)="showForm=false" class="w3-right w3-opacity cursor-pointer"><i class="far fa-window-close "></i></span>          
+    <h4 class="w3-border-bottom">Magazine</h4>
+    <form class="w3-padding" [formGroup]="magazineForm">
+        <input type="hidden" formControlName="id">
+        <span class="w3-block"><label>Title</label><input type="text" size="50" formControlName="title" autofocus></span>
+        <span class="w3-show-inline-block"><label>Number</label><input type="text" size="5" formControlName="number"></span>
+        <span class="w3-show-inline-block"><label>Year</label><input type="text" size="4" formControlName="year"></span>
+        <span class="w3-show-inline-block"><label>Month</label><input type="text" size="2" formControlName="month"></span>
+        <span class="w3-show-inline-block"><label>Pages</label><input type="text" size="5" formControlName="pages"></span>
+        <span class="w3-block"><label>Editor</label><input type="text" size="50" formControlName="editor"></span>
+        <button (click)="save()" class="w3-button w3-margin-top w3-margin-right w3-theme-l4">Save</button>
+        <button (click)="cancel()" class="w3-button w3-margin-top w3-margin-right w3-theme-l4">Cancel</button>
+    </form>
+</div>
